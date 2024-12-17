@@ -39,6 +39,7 @@ def analyze_data(input_file, output_file, coverage_cutoff, mean_cutoff, dwell_cu
 
     result_df = pd.DataFrame(result_list)
     result_df.to_csv(output_file, sep='\t', index=False, header=False)
+    print("Merging finished! Results written to {}".format(output_file))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Merging the raw result of nanoSundial")

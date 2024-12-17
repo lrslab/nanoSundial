@@ -1,9 +1,9 @@
 # nanoSundial
 A de novo modification detection tool targeting current features based on the 004kit for prokaryotes.
 
-## Install (Still testing)
+## Environment preparation
 
-In order to make it easy to install nanoSundial, we provided two different methods for users.
+In order to make it easy to run nanoSundial, we provided two different methods for users to prepare the software environment.
 
 (1). Installing packages from **Conda**
 
@@ -12,6 +12,9 @@ In order to make it easy to install nanoSundial, we provided two different metho
     pip install -r requirement.txt
 
 (2). Installing from **Docker**
+
+    docker pull zhihaguo/nanocem_env
+    # git clone is required when it enter to the Docker container
 
 ## Pre-processing
 
@@ -122,7 +125,7 @@ After applying the recommended cutoff values (|mean difference|: 0.18, |dwell ti
 
     # Download data
     git clone https://github.com/lrslab/nanoSundial.git
-
+    cd nanoSundial/
     # Feature extraction
     cd test_data/wt/
     python ../../extract_feature_region.py --fastq sample.fastq --blow5 sample.blow5 --ref ../ref.fasta --rna --cpu 4
