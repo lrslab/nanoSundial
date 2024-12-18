@@ -63,7 +63,7 @@ Below is an introduction to the parameters
       -r REF, --ref REF     reference path (fasta file)
       -t CPU, --cpu CPU     Process numbers
       --pore {r9,r10,rna004}
-                            flowcell
+                            pore (default: rna004)
       --subsample SUBSAMPLE
                             subsample ratio (0-1, used to subsample data, default:1)
       --win_size WIN_SIZE   windows size (default:100000)
