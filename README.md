@@ -18,6 +18,12 @@ In order to make it easy to run nanoSundial, we provided two different methods f
     docker pull zhihaguo/nanocem_env
     # git clone is required when it enters to the Docker container
 
+## Workflow
+<div style="text-align: center;">
+    <img src="workflow.jpg" width="400" style="margin: 0 auto;">
+</div>
+
+
 ## Pre-processing
 
 In theory, nanoSundial is a comparative method that requires **two** samples. 
@@ -37,10 +43,6 @@ The file list should be structured as follows, and q quick start with example da
     │   └── sample.blow5  # Raw signal, BLOW5 file   
     │   └── sample.fastq # Basecalled reads, FASTQ file
     └── ref.fasta  # Reference sequence, FASTA file
-
-## Workflow
-<div style="display: flex; align-items: center;"> <img src="workflow.jpg" width="500" style="margin-right: auto;margin-left: auto"></div>
-
 
 ## Manual of nanoSundial
 nanoSundial offers three functional scripts: `extract_feature_region.py`, `sundial_comp.py`, and `merge_positive_region.py`. 
