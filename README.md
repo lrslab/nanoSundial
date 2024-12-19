@@ -1,5 +1,6 @@
-# <div style="display: flex; align-items: center;">nanoSundial <img src="nanoSundial.png" width="80" style="margin-right: 10px;"></div>
 
+# <div style="display: flex; align-items: center;font-family: 'Arial';">nanoSundial  <img src="nanoSundial.png" width="50" style="margin-right: auto;"></div>
+    
 A comparative modification detection tool targeting current features based on the 004kit for prokaryotes.
 
 ## Environment preparation
