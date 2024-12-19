@@ -1,5 +1,6 @@
-# nanoSundial
-A de novo modification detection tool targeting current features based on the 004kit for prokaryotes.
+# <div style="display: flex; align-items: center;"> <img src="nanoSundial.png" width="80" style="margin-right: 10px;"><p style="font-family: 'MV Boli';">nanoSundial </p></div>
+
+A comparative modification detection tool targeting current features based on the 004kit for prokaryotes.
 
 ## Environment preparation
 
@@ -36,6 +37,10 @@ The file list should be structured as follows, and q quick start with example da
     │   └── sample.blow5  # Raw signal, BLOW5 file   
     │   └── sample.fastq # Basecalled reads, FASTQ file
     └── ref.fasta  # Reference sequence, FASTA file
+
+## Workflow
+<div style="display: flex; align-items: center;"> <img src="workflow.jpg" width="500" style="margin-right: auto;margin-left: auto"></div>
+
 
 ## Manual of nanoSundial
 nanoSundial offers three functional scripts: `extract_feature_region.py`, `sundial_comp.py`, and `merge_positive_region.py`. 
