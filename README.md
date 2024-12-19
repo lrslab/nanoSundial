@@ -1,4 +1,4 @@
-# <div style="display: flex; align-items: center;"> <img src="nanoSundial.png" width="80" style="margin-right: 10px;"><p style="font-family: 'MV Boli';">nanoSundial </p></div>
+# <div style="display: flex; align-items: center;">nanoSundial <img src="nanoSundial.png" width="80" style="margin-right: 10px;"></div>
 
 A comparative modification detection tool targeting current features based on the 004kit for prokaryotes.
 
@@ -19,10 +19,9 @@ In order to make it easy to run nanoSundial, we provided two different methods f
     # git clone is required when it enters to the Docker container
 
 ## Workflow
-<div style="text-align: center;">
-    <img src="workflow.jpg" width="400" style="margin: 0 auto;">
+<div align="center">
+  <img src="workflow.jpg" width="400" alt="Workflow">
 </div>
-
 
 ## Pre-processing
 
@@ -35,14 +34,19 @@ For the content of how raw data convert to blow5 and how to basecall, please ref
 Additionally, a reference sequence (**fasta** file) is required. The genome is recommended for prokaryotic analysis; however, the transcriptome might be more suitable for eukaryotic analysis.
 The file list should be structured as follows, and q quick start with example data is [here](#quick-start-with-example-data):
 
-    test_data/
-    ├── wt/
-    │   └── sample.blow5  # Raw signal, BLOW5 file  
-    │   └── sample.fastq # Basecalled reads, FASTQ file
-    ├── ivt/
-    │   └── sample.blow5  # Raw signal, BLOW5 file   
-    │   └── sample.fastq # Basecalled reads, FASTQ file
-    └── ref.fasta  # Reference sequence, FASTA file
+
+
+```plaintext
+# Test Data Directory Structure
+test_data/
+├── wt/
+│   └── sample.blow5  # Raw signal, BLOW5 file  
+│   └── sample.fastq  # Basecalled reads, FASTQ file
+├── ivt/
+│   └── sample.blow5  # Raw signal, BLOW5 file   
+│   └── sample.fastq  # Basecalled reads, FASTQ file
+└── ref.fasta         # Reference sequence, FASTA file
+```
 
 ## Manual of nanoSundial
 nanoSundial offers three functional scripts: `extract_feature_region.py`, `sundial_comp.py`, and `merge_positive_region.py`. 
