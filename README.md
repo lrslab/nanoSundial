@@ -53,7 +53,7 @@ test_data/
 nanoSundial offers three functional scripts: `extract_feature_block.py`, `sundial_comp.py`, and `merge_positive_region.py`. 
 The extract_feature_block.py script needs to be run separately for each of the two samples, ensuring the same parameters are used for each run.
 ### 1. Feature extraction
-We have provided a script for feature extraction called `extract_feature_region.py`. 
+We have provided a script for feature extraction called `extract_feature_block.py`. 
 
 Below is an introduction to the parameters
 
