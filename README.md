@@ -57,8 +57,8 @@ We have provided a script for feature extraction called `extract_feature_region.
 
 Below is an introduction to the parameters
 
-    python extract_feature_region.py -h
-    usage: extract_feature_region.py [-h] [-f FASTQ] [-b BLOW5] [-o OUTPUT]
+    python extract_feature_block.py -h
+    usage: extract_feature_block.py [-h] [-f FASTQ] [-b BLOW5] [-o OUTPUT]
                                      [-r REF] [-t CPU] [--pore {r9,r10,rna004}]
                                      [--subsample SUBSAMPLE] [--win_size WIN_SIZE]
                                      [--flip FLIP] [--rna]
@@ -78,7 +78,7 @@ Below is an introduction to the parameters
                             pore (default: rna004)
       --subsample SUBSAMPLE
                             subsample ratio (0-1, used to subsample data, default:1)
-      --win_size WIN_SIZE   windows size (default:100000)
+      --win_size WIN_SIZE   block size, output feature file per block (default:100000)
       --flip FLIP           length of the base of exclusion of start or end
       --rna                 Turn on the RNA mode
       --base_shift {auto,0,-1,-2,-3,-4,-5,-6,-7,-8}
@@ -141,9 +141,9 @@ After applying the recommended cutoff values (|mean difference|: 0.18, |dwell ti
     cd nanoSundial/
     # Feature extraction
     cd test_data/wt/
-    python ../../extract_feature_region.py --fastq sample.fastq --blow5 sample.blow5 --ref ../ref.fasta --rna --cpu 4
+    python ../../extract_feature_block.py --fastq sample.fastq --blow5 sample.blow5 --ref ../ref.fasta --rna --cpu 4
     cd ../ivt/
-    python ../../extract_feature_region.py --fastq sample.fastq --blow5 sample.blow5 --ref ../ref.fasta --rna --cpu 4
+    python ../../extract_feature_block.py --fastq sample.fastq --blow5 sample.blow5 --ref ../ref.fasta --rna --cpu 4
 
     # Statistical analysis
     cd ../
