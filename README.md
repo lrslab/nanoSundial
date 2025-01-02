@@ -17,7 +17,7 @@ In order to make it easy to run nanoSundial, we provided two different methods f
 (2). Installing from **Docker**
 
     docker pull zhihaguo/nanocem_env
-    # git clone is required when it enters to the Docker container
+    # git clone is required when it enters the Docker container
 
 ## Workflow
 <div align="center">
