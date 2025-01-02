@@ -8,7 +8,7 @@ from tqdm import tqdm
 import multiprocessing
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
-from scipy import stats
+# from scipy import stats
 import copy
 
 kmer_model_size ={
