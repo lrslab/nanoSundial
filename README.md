@@ -20,16 +20,31 @@ In order to make it easy to run nanoSundial, we provided two different methods f
     # git clone is required when it enters the Docker container
 
 ## Workflow
+
+### Figure
 <div align="center">
   <img src="workflow.jpg" width="400" alt="Workflow">
 </div>
 
+### Network
+
+```mermaid
+graph TD
+	A1(blow5 and fastq from wild type)-->|extract_feature_block.py| C1[/feature folder\]
+    A2(blow5 and fastq from  negative control)-->|extract_feature_block.py| C2[/feature folder\]
+    C1 --> D{sundial_comp.py} 
+    C2 --> D{sundial_comp.py}
+    D{sundial_comp.py} --> |manova| E(sundial_result.csv)
+    E(sundial_result.csv)  --> |merge_positive_region.py| F(merged_positive_region.bed)
+
+    
+```
 ## Pre-processing
 
 In theory, nanoSundial is a comparative method that requires **two** samples. 
 
 Using a **wild type** and a **negative control**is recommended. 
-Raw sequencing data (**blow5**) and basecalled file (**fastq**) files are needed for each sample. 
+Each sample needs raw sequencing data (**blow5**) and basecalled file (**fastq**) files. 
 For the content of how raw data convert to blow5 and how to basecall, please refer to [this](https://nanocem.readthedocs.io/en/latest/preparation/)
 
 Additionally, a reference sequence (**fasta** file) is required. The genome is recommended for prokaryotic analysis; however, the transcriptome might be more suitable for eukaryotic analysis.
