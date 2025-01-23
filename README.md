@@ -20,30 +20,15 @@ In order to make it easy to run nanoSundial, we provided two different methods f
     # git clone is required when it enters the Docker container
 
 ## Workflow
-
-### Figure
 <div align="center">
   <img src="workflow.jpg" width="400" alt="Workflow">
 </div>
 
-### Network
-
-```mermaid
-graph TD
-	A1(blow5 and fastq from wild type)-->|extract_feature_block.py| C1[/feature folder\]
-    A2(blow5 and fastq from  negative control)-->|extract_feature_block.py| C2[/feature folder\]
-    C1 --> D{sundial_comp.py} 
-    C2 --> D{sundial_comp.py}
-    D{sundial_comp.py} --> |manova| E(sundial_result.csv)
-    E(sundial_result.csv)  --> |merge_positive_region.py| F(merged_positive_region.bed)
-
-    
-```
 ## Pre-processing
 
 In theory, nanoSundial is a comparative method that requires **two** samples. 
 
-Using a **wild type** and a **negative control**is recommended. 
+A **wild type** and a **negative control** is recommended. 
 Each sample needs raw sequencing data (**blow5**) and basecalled file (**fastq**) files. 
 For the content of how raw data convert to blow5 and how to basecall, please refer to [this](https://nanocem.readthedocs.io/en/latest/preparation/)
 
@@ -67,6 +52,18 @@ test_data/
 ## Manual of nanoSundial
 nanoSundial offers three functional scripts: `extract_feature_block.py`, `sundial_comp.py`, and `merge_positive_region.py`. 
 The extract_feature_block.py script needs to be run separately for each of the two samples, ensuring the same parameters are used for each run.
+### Pipeline graph
+
+```mermaid
+graph TD
+	A1(blow5 and fastq from wild type)-->|extract_feature_block.py| C1[/feature folder\]
+    A2(blow5 and fastq from  negative control)-->|extract_feature_block.py| C2[/feature folder\]
+    C1 --> D{sundial_comp.py} 
+    C2 --> D{sundial_comp.py}
+    D{sundial_comp.py} --> |manova| E(sundial_result.csv)
+    E(sundial_result.csv)  --> |merge_positive_region.py| F(merged_positive_region.bed)
+    
+```
 ### 1. Feature extraction
 We have provided a script for feature extraction called `extract_feature_block.py`. 
 
