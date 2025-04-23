@@ -60,7 +60,7 @@ graph TD
     A2(blow5 and fastq from  negative control)-->|extract_feature_block.py| C2[/feature folder\]
     C1 --> D{sundial_comp.py} 
     C2 --> D{sundial_comp.py}
-    D{sundial_comp.py} --> |manova| E(sundial_result.csv)
+    D{sundial_comp.py} --> |MANOVA or LR or KS | E(sundial_result.csv)
     E(sundial_result.csv)  --> |merge_positive_region.py| F(merged_positive_region.bed)
     
 ```
