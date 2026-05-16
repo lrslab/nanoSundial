@@ -165,3 +165,6 @@ After applying the recommended cutoff values (|mean difference|: 0.18, |dwell ti
 
     # Merging strategy
     python ../merge_positive_region.py --input nanosundial_result.csv
+
+## Citation
+Guo, Z., Shao, Y., Tan, L., Lu, B., Deng, X., Chen, S. and Li, R., 2025. Enhanced detection of RNA modifications in Escherichia coli utilizing direct RNA sequencing. **Cell reports methods**, 5(9).
